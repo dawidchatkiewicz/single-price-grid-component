@@ -1,0 +1,130 @@
+:root {
+	--ff-primary: 'Karla', sans-serif;
+
+	--fw-400: 400;
+	--fw-700: 700;
+
+	--fs-normal: 0.9rem;
+
+	--cyan: hsl(179, 62%, 43%);
+	--cyan-light: hsl(179, 52%, 49%);
+	--bright-yellow: hsl(71, 73%, 54%);
+
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: var(--fs-normal);
+	background-color: var(--light-gray);
+	line-height: 1.7;
+	color: var(--grayish-blue);
+	font-family: var(--ff-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+button {
+	background-color: var(--bright-yellow);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: var(--fw-700);
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 0.3rem;
+	box-shadow: 0px 10px 10px 0px rgba(66, 68, 90, 0.2);
+	width: 100%;
+}
+
+.main-grid {
+	background-color: #fff;
+	border-radius: 0.3rem;
+	margin: 1.5rem;
+	display: grid;
+}
+
+.hero {
+	padding: 1.3rem;
+}
+
+.hero__title {
+	color: var(--cyan);
+	margin-bottom: 1rem;
+}
+
+.hero__special {
+	color: var(--bright-yellow);
+	font-size: 1rem;
+	font-weight: var(--fw-700);
+	margin-bottom: 1rem;
+}
+
+.hero__description {
+	margin-bottom: 1rem;
+}
+
+.subscription {
+	background-color: var(--cyan);
+	padding: 1.3rem;
+	color: #fff;
+}
+
+.subscription__flex {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.subscription__price {
+	font-size: 2rem;
+	font-weight: var(--fw-700);
+}
+
+.subscription__subtext {
+	margin-bottom: 1.3rem;
+}
+
+.price-text {
+	opacity: 0.5;
+}
+
+.about {
+	background-color: var(--cyan-light);
+	padding: 1.3rem;
+	color: #fff;
+	border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.about__text {
+	opacity: 0.7;
+	padding-right: 70px;
+}
+
+.about__title {
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+	.main-grid {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 800px;
+		
+	}
+	.grid-col-span-2 {
+		grid-column: span 2;
+	}
+	.about {
+		border-radius: 0 0 0.3rem 0;
+	}
+	.subscription {
+		border-radius: 0 0 0 0.3rem;
+	}
+}
